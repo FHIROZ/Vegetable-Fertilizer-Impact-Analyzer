@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Fertilizer Prediction</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+  <!-- HERO SECTION -->
+  <header class="hero">
+    <h1>AI Fertilizer Prediction</h1>
+    <p>Upload a vegetable image and get instant insights on fertilizer impact and organic quality.</p>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="container">
+
+    <!-- UPLOAD CARD -->
+    <section class="card upload-card">
+      <h2>Upload Vegetable Image</h2>
+      <form id="uploadForm" enctype="multipart/form-data">
+        <input type="file" id="imageInput" name="image" accept="image/*" required>
+        <button type="submit">Analyze Image</button>
+      </form>
+      <div id="error"></div>
+    </section>
+
+    <!-- RESULT CARD -->
+    <section class="card result-card">
+      <h2>Prediction Result</h2>
+      <div class="result">
+        <p><b>Prediction:</b> <span id="prediction"></span></p>
+        <p><b>Confidence:</b> <span id="confidence"></span>%</p>
+        <p><b>Fertilizer Impact:</b> <span id="fertilizer"></span></p>
+        <p><b>Organic Likelihood:</b> <span id="organic"></span></p>
+      </div>
+    </section>
+
+    <!-- FEATURES SECTION -->
+    <section class="features">
+      <div class="feature">🌱 AI-Based Image Analysis</div>
+      <div class="feature">⚡ Instant Prediction</div>
+      <div class="feature">📊 Organic Quality Estimation</div>
+      <div class="feature">🔬 Smart Fertilizer Impact Detection</div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 Fertilizer AI | Built with Machine Learning</p>
+  </footer>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
